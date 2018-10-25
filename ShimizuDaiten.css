@@ -1,0 +1,161 @@
+/* common style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 32px;
+    padding: 0 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid orange;
+    width: fit-content;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+.card {
+    background-color: #FAFBFD;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 6px 2px;
+    border-radius: 8px;
+    margin: 16px;
+    transition: all .2s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+}
+
+/* custom style */
+
+.top-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 6px 2px;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.top-view img {
+    border-radius: 50%;
+    height: 256px;
+    width: 256px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 6px 2px;
+    transition: all .3s cubic-bezier(1, -1.5, 1, 1);
+}
+
+.top-view img:hover {
+    transform: scale(1.05);
+}
+
+.self-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.self-info .name {
+    font-size: 72px;
+    letter-spacing: .1em;
+}
+
+.self-info .student-number {
+    font-size: 24px;
+    letter-spacing: .1em;
+}
+
+section.birthplace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 840px;
+    margin: 80px auto;
+}
+
+section.birthplace img {
+    margin-right: 64px;
+}
+
+.horizontal-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 48px auto;
+}
+
+.horizontal-content > * {
+    width: 520px;
+}
+
+section.hobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobby-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hobby-list > * {
+    width: 220px;
+    overflow: hidden;
+}
+
+.hobby-list .name {
+    font-size: 24px;
+    text-align: center;
+}
+
+.hobby-list img {
+    width: 220px;
+    height: 120px;
+}
+
+.favorite-ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorite-ranking li {
+    letter-spacing: .3em;
+    position: relative;
+}
+
+.favorite-ranking li:nth-child(1) {
+    font-size: 40px;
+}
+
+.favorite-ranking li:nth-child(n + 2) {
+    font-size: 32px;
+}
